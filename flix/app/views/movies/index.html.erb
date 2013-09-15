@@ -1,7 +1,28 @@
-<h1>Movies</h1>
+<h1><%= pluralize(@movies.size, 'Movie') %></h1>
 
-<ul>
-	<% @movies.each do |m| %>
-		<li> <%= m %> </li>
-	<% end %>
-</ul>
+<% @movies.each do |m| %>
+  <article>
+    <header>
+      <h2><%= m.title %></h2>
+    </header>
+    <p>
+      <%= truncate(m.description, length: 20, separator: ' ')%>
+    </p>
+    <table>
+      <tr>
+        <th>Released:</th>
+        <td>
+          <%= m.released_on.to_s(:release_date) %>
+          (<%= time_ago_in_words(m.released_on) %> ago)</td>
+      </tr>
+      <tr>
+        <th>Rating:</th>
+        <td><%= m.rating %></td>
+      </tr>
+      <tr>
+        <th>Total Gross:</th>
+        <td><%= format_total_gross(m) %></td>
+      </tr>
+    </table>
+  </article>
+<% end %>
