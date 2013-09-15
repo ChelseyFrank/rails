@@ -1,7 +1,10 @@
 class MoviesController < ApplicationController
 
 	def index
-		@movies = ["Iron Man", "Superman", "Spiderman", "Batman"]
+		@movies = Movie.all
 	end
 
+	def show
+		@movie = Movie.find(params[:id])
+	end
 end
