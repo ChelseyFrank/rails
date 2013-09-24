@@ -3,7 +3,7 @@
 <% @movies.each do |m| %>
   <article>
     <header>
-      <h2><%= m.title %></h2>
+      <h2><%= link_to(m.title, m) %></h2>
     </header>
     <p>
       <%= truncate(m.description, length: 20, separator: ' ')%>
