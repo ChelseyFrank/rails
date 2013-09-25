@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Viewing the list of movies" do
-  it "shows the movies" do
+  it "shows all the movies" do
 		movie1 = Movie.create(title: "Iron Man",
                       rating: "PG-13",
                       total_gross: 318412101.00,
