@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130924225910) do
+ActiveRecord::Schema.define(version: 20130930025526) do
 
   create_table "events", force: true do |t|
     t.string   "name"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20130924225910) do
     t.datetime "starts_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.integer  "capacity",        default: 1
   end
 
 end
