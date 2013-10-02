@@ -3,7 +3,7 @@
 <%= link_to "Add New Event", new_event_path %>
 
 <% @events.each do |event| %>
-  <article>
+  <article class="event">
     <header>
       <%= image_for(event) %>
       <h2><%= link_to event.name, event %></h2>
