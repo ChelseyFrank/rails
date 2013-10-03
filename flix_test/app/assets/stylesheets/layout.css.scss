@@ -1,18 +1,29 @@
+$main-color: #237CBE;
+$accent-color: #F0F0F0;
+
 header#page-header {
-	color: #F0F0F0;
-	background: #237CBE;
+	color: $accent-color;
+	background: $main-color;
 	padding: 5px;
+	border-bottom: 3px solid darken($main-color, 25%);
+
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+		font-family: Verdana;
+	}
 }
 
 footer#page-footer {
 	text-align: center;
 	padding: 5px;
-	color: #237CBE;
-	background: #F0F0F0;
+	color: $main-color;
+	background: $accent-color;
+	border-bottom: 3px solid darken($main-color, 25%);
 }
 
 aside#sidebar {
 	float: right;
-	background: #F0F0F0;
+	background: $accent-color;
 	width: 200px;
 }
