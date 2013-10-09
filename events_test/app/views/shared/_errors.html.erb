@@ -1,0 +1,9 @@
+<% if @event.errors.any? %>
+  <section id="errors">
+    <ul>
+    <% @event.errors.full_messages.each do |m| %>
+      <li><%= m %></li>
+    <% end %>
+    </ul>
+  </section>
+<% end %>
