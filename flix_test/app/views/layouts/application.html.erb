@@ -12,11 +12,7 @@
 
 <div id="wrapper">
 
-  <% if flash[:notice] %>
-    <p class= "flash notice">
-      <%= flash[:notice] %>
-    </p>
-  <% end %>
+  <%= render "layouts/flashes" %>
 
   <% if flash[:alert] %>
     <p class= "flash alert">
