@@ -14,6 +14,8 @@ class Event < ActiveRecord::Base
 
 	validate :price_is_a_multiple_of_fifty_cents
 
+	has_many :registrations
+
 	def free?
 		price.blank? || price.zero?
 	end
